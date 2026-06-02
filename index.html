@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-y: auto; /* FIXED: Allows scrolling */
         }
 
         .terminal {
@@ -177,7 +177,7 @@
         <div id="page3" class="page">
             <div class="header">
                 <h1 class="title">MONERO TUNNEL DASHBOARD</h1>
-                <p class="subtitle">USER ID: <span id="displayUser">0297399</span></p>
+                <p class="subtitle">USER ID: <span id="displayUser">83910</span></p>
             </div>
 
             <div class="balance">
@@ -244,7 +244,7 @@
             const input = document.getElementById('userInput').value.trim();
             const error = document.getElementById('errorMsg');
             
-            if (input === "0297399") {
+            if (input === "83910") {
                 nextPage(3);
             } else {
                 error.textContent = "INVALID USER ID - ACCESS DENIED";
